@@ -24,13 +24,13 @@ function Progress({ProfileHandler,
                     FAQHandler,
                     InventoryHandler,
                     ProgressHandler,
-                    SettingsHandler} : Props) {
+                    SettingsHandler,
                     backToHomeHandler} : Props) {
     return (
         <div style={{ margin: 0, padding: 0, height: '100vh', position: 'relative' }}>
             <NavigationBar 
-                ProfileHandler={ProfileHandler}
                 getStartedHandler={getStartedHandler}
+                ProfileHandler={ProfileHandler}
                 InventoryHandler={InventoryHandler}
                 ProgressHandler={ProgressHandler}
                 SettingsHandler={SettingsHandler}

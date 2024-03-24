@@ -88,44 +88,50 @@ function App() {
                                         FAQHandler={toFAQPage} 
                                       />} />
         <Route path="/profile" element={<Profile 
-                                            ProfileHandler={toProfilePage} 
-                                            aboutUsHandler={toAboutUsPage} 
-                                            contactHandler={toContactPage} 
-                                            FAQHandler={toFAQPage} 
                                             getStartedHandler={goToLogin}
+                                            aboutUsHandler={toAboutUsPage}
+                                            contactHandler={toContactPage}
+                                            FAQHandler={toFAQPage}
+                                            ProfileHandler={toProfilePage}
                                             InventoryHandler={toInventoryPage}
-                                            backToHomeHandler={backToHome}
                                             ProgressHandler={toProgressPage}
+                                            backToHomeHandler={backToHome}
+                                            SettingsHandler={toProfilePage}
                                           />} />
         <Route path="/inventory" element={<Inventory 
-                                              ProfileHandler={toProfilePage} 
-                                              aboutUsHandler={toAboutUsPage} 
-                                              contactHandler={toContactPage} 
-                                              FAQHandler={toFAQPage} 
                                               getStartedHandler={goToLogin}
-                                              ViewHandler={toViewPage}
-                                              InventoryHandler={toInventoryPage}
-                                              backToHomeHandler={backToHome} 
+                                              aboutUsHandler={toAboutUsPage}
+                                              contactHandler={toContactPage}
+                                              FAQHandler={toFAQPage}
+                                              ProfileHandler={toProfilePage}
                                               ProgressHandler={toProgressPage}
+                                              ViewHandler={toViewPage}
+                                              backToHomeHandler={backToHome}
+                                              InventoryHandler={toInventoryPage}
+                                              SettingsHandler={toProfilePage}
                                             />} />
         <Route path="/inventory/view" element={<View 
-                                              ProfileHandler={toProfilePage} 
-                                              aboutUsHandler={toAboutUsPage} 
-                                              contactHandler={toContactPage} 
-                                              FAQHandler={toFAQPage} 
-                                              getStartedHandler={goToLogin}
-                                              ViewHandler={toViewPage}
-                                              InventoryHandler={toInventoryPage}
-                                              backToHomeHandler={backToHome}
-                                            />} />
+                                                getStartedHandler={goToLogin}
+                                                aboutUsHandler={toAboutUsPage}
+                                                contactHandler={toContactPage}
+                                                FAQHandler={toFAQPage}
+                                                ProfileHandler={toProfilePage}
+                                                ViewHandler={toViewPage}
+                                                backToHomeHandler={backToHome}
+                                                InventoryHandler={toInventoryPage}
+                                                SettingsHandler={toProfilePage}
+                                                ProgressHandler={toProgressPage}
+                                              />} />
         <Route path="/progress" element={<Progress 
-                                              ProfileHandler={toProfilePage} 
-                                              aboutUsHandler={toAboutUsPage} 
-                                              contactHandler={toContactPage} 
-                                              FAQHandler={toFAQPage} 
                                               getStartedHandler={goToLogin}
+                                              aboutUsHandler={toAboutUsPage}
+                                              contactHandler={toContactPage}
+                                              FAQHandler={toFAQPage}
+
+                                              ProfileHandler={toProfilePage} 
                                               InventoryHandler={toInventoryPage}
                                               ProgressHandler={toProgressPage}
+                                              SettingsHandler={toProfilePage}
                                               backToHomeHandler={backToHome}
                                             />} />
       </Routes>

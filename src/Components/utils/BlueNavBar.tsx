@@ -6,9 +6,9 @@ import setting_icon from '../../Images/setting_icon.png'
 import theme_icon from '../../Images/theme_icon.png'
 import inventory_icon from '../../Images/inventory_icon.png'
 import logout_icon from '../../Images/logout_icon.png'
-import selected_learning_icon from '../../Images/learning_selected_icon.png'
+import selected_learning_icon from '../../Images/learning_selected_icon.png' //
 import selected_profile_icon from '../../Images/profile_selected_icon.png'
-import selected_setting_icon from '../../Images/setting_selected_icon.png'
+import selected_setting_icon from '../../Images/setting_selected_icon.png' //
 import selected_inventory_icon from '../../Images/inventory_selected_icon.png'
 import React, { useState, useEffect } from 'react';
 interface Props {
