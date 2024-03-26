@@ -1,0 +1,105 @@
+#userinfo {
+    color: black;
+    font-size: 25px;
+    font-weight: 650;
+    line-height: 22px;
+    margin-top: 6%;
+    margin-left: 5%;
+}
+
+#about-me-form form {
+    display: flex;
+    flex-direction: column;
+    max-width: 569px;
+    margin-top: 1.5%;
+    margin-left:5%;
+}
+
+#about-me-form input {
+    margin-bottom: 10px;
+    color: #3127A0;
+}
+
+#about-me-form label {
+    font-weight: 600;
+}
+
+#settings-emailaddress {
+    height: 30px;
+    width: 99%;
+    border-style: solid;
+    border-color: #3127A0;
+    border-width: 1.3px;
+
+}
+#settings-about {
+    height: 70px;
+    border-style: solid;
+    border-color: #3127A0;
+    border-width: 1.3px;
+}
+
+#sign-up-fields form {
+    height: 30px;
+}
+
+.settings-name {
+    height: 30px;
+    width: 250px;
+    border-style: solid;
+    border-color: #3127A0;
+    border-width: 1.3px;
+}
+
+#change-password {
+    color: black;
+    font-size: 24px;
+    font-weight: 650;
+    line-height: 22px;
+    margin-left: 5%;
+}
+#change-and-confirm {
+    float: left;
+    margin-left: 5%;
+    margin-top:2%;
+}
+
+#change-input, #current-input, #confirm-input {
+    width: 250px;
+    height: 33px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border-style: solid;
+    border-color: #3127A0;
+    border-width: 1.3px;
+}
+
+#change-and-confirm label {
+    font-weight: 700;
+}
+
+#noti {
+    margin-left:40%;
+    margin-top: -1.5%;
+}
+
+#notifications {
+    color: black;
+    font-size: 24px;
+    font-weight: 650;
+    line-height: 22px;
+}
+
+.not-black-text {
+    margin-top: 5%;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.not-grey-text {
+    margin-top: 2%;
+    color: #858587;
+    font-size: 16px;
+    font-weight: 400;
+}

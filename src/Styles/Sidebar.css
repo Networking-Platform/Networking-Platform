@@ -245,6 +245,29 @@
     justify-content: flex-start; /* Align children to the left */
     padding-left: 15px; /* Adding space for the icon */
 }
+#sidebar-selected-setting-button {
+    position: absolute;
+    width: 83%;
+    height: 48px;
+    left: 6%;
+    top: calc(120px + 3 * (48px + 20px));
+    font-family: Inter, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #3127A0;
+    opacity: 0.9;
+    z-index: 1000;
+    background-color: #FFFFFF;
+    border: none; /* Removing border */
+    border-radius: 30px;
+    cursor: pointer;
+    display: flex; /* Add display flex to align children in a row */
+    align-items: center; /* Align children vertically in the center */
+    justify-content: flex-start; /* Align children to the left */
+    padding-left: 15px; /* Adding space for the icon */
+}
 
 #sidebar-selected-inventory-button img {
     width: 22px;
@@ -275,12 +298,18 @@
     padding-left: 15px; /* Adding space for the icon */
 }
 
+
 #sidebar-setting-button img {
     width: 22px;
     height: 22px;
     margin-right: 12px;
 }
 
+#sidebar-selected-setting-button img {
+    width: 22px;
+    height: 22px;
+    margin-right: 12px;
+}
 #separation-line {
     position: absolute;
     width: 250px;

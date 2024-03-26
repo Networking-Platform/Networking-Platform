@@ -29,7 +29,7 @@ body {
 #abu-words {
     width: 658px;
     top: 250px;
-    left: 58%;
+    right: 3%;
     position: absolute;
     line-height: 35px;
     color: #000000;
@@ -38,20 +38,14 @@ body {
     font-weight: 600;
 }
 
-#moneyVerse {
-    position: absolute;
-    width: 697px;
-    height: 426px;
-    top: 22%;
-    left: 3%;
-}
+
 
 #palzplant {
     position: absolute;
     width: 329px;
     height: 194px;
     top: 623px;
-    left: 83%;
+    right: 0%;
 }
 
 #palzplant2 {
@@ -59,7 +53,7 @@ body {
     width: 285px;
     height: 162px;
     top: 655px;
-    left: 74%;
+    right: 12%;
 }
 
 #meetus {
@@ -81,4 +75,28 @@ body {
 .grid-item img {
     width: 100%;
     height: auto;
+}
+
+#moneyVerse {
+    position: absolute;
+    width: 697px;
+    height: 426px;
+    top: 22%;
+    left: 3%;
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1450px) {
+    #moneyVerse {
+        width: 464px;
+        height: 284px;
+        position: absolute;
+        top: 30%;
+        right: 4%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #moneyVerse {
+        display: none;
+    }
 }

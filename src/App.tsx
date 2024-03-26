@@ -12,6 +12,7 @@ import "@fontsource/inter"
 import "@fontsource/inter/700.css";
 import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom';
 import View from './Components/View';
+import Settings from './Components/Settings';
 
 function App() {
 
@@ -58,6 +59,10 @@ function App() {
     setPage('Progress');
   }
 
+  const toSettingsPage = () => {
+    setPage('Settings');
+  }
+
   return (
     <div>
       <Routes>
@@ -96,6 +101,7 @@ function App() {
                                             InventoryHandler={toInventoryPage}
                                             backToHomeHandler={backToHome}
                                             ProgressHandler={toProgressPage}
+                                            SettingsHandler={toSettingsPage}
                                           />} />
         <Route path="/inventory" element={<Inventory 
                                               ProfileHandler={toProfilePage} 
@@ -107,6 +113,7 @@ function App() {
                                               InventoryHandler={toInventoryPage}
                                               backToHomeHandler={backToHome} 
                                               ProgressHandler={toProgressPage}
+                                              SettingsHandler={toSettingsPage}
                                             />} />
         <Route path="/inventory/view" element={<View 
                                               ProfileHandler={toProfilePage} 
@@ -117,6 +124,8 @@ function App() {
                                               ViewHandler={toViewPage}
                                               InventoryHandler={toInventoryPage}
                                               backToHomeHandler={backToHome}
+                                              SettingsHandler={toSettingsPage}
+                                              ProgressHandler={toProgressPage}
                                             />} />
         <Route path="/progress" element={<Progress 
                                               ProfileHandler={toProfilePage} 
@@ -126,6 +135,18 @@ function App() {
                                               getStartedHandler={goToLogin}
                                               InventoryHandler={toInventoryPage}
                                               ProgressHandler={toProgressPage}
+                                              SettingsHandler={toSettingsPage}
+                                              backToHomeHandler={goToLogin}
+                                            />} />
+        <Route path = "/settings" element={<Settings 
+                                              ProfileHandler={toProfilePage} 
+                                              aboutUsHandler={toAboutUsPage} 
+                                              contactHandler={toContactPage} 
+                                              FAQHandler={toFAQPage} 
+                                              getStartedHandler={goToLogin}
+                                              InventoryHandler={toInventoryPage}
+                                              ProgressHandler={toProgressPage}
+                                              SettingsHandler={toSettingsPage}
                                               backToHomeHandler={backToHome}
                                             />} />
       </Routes>
