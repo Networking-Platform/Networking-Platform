@@ -1,4 +1,5 @@
 import HumaaansWireframe from '../Images/Humaaans Wireframe.png';
+import React, { useState } from 'react';
 import '../Styles/login.modules.css';
 
 interface Props {
@@ -6,6 +7,44 @@ interface Props {
 }
 
 function LogIn({backToHomeHandler}: Props) {
+    const url = 'http://localhost:4000/login';
+
+
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [errorMessage, setErrorMessage] = useState('');
+    const [successMessage, setSuccessMessage] = useState('');
+
+    const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+        
+        try {
+            const response = await fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ email, password })
+            });
+
+            if (response.ok) {
+                setSuccessMessage('Login successful');
+                setEmail('');
+                setPassword('');
+                window.location.href = '/profile';
+            } else if (response.status === 404) {
+                setErrorMessage('User not found');
+            } else if (response.status === 401) {
+                setErrorMessage('Invalid credentials');
+            } else {
+                setErrorMessage('Error connecting to server');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            setErrorMessage('Error connecting to server');
+        }
+    };
+
     return (
         <div style={{
             margin: 0,
@@ -37,18 +76,33 @@ function LogIn({backToHomeHandler}: Props) {
                         If you are already a member you can login with your email address and password.
                     </div>
 
+
                     <div id="username-and-password">
-                        <form>
-                            <label htmlFor="username"> User name</label><br />
-                            <input type="text" id="user-name" name="username" /><br />
+                        <form onSubmit={handleSubmit}>
+                            <label htmlFor="username"> Email address</label><br />
+                            <input 
+                                type="email" 
+                                id="user-email" 
+                                name="email" 
+                                value={email} 
+                                onChange={(e) => setEmail(e.target.value)} 
+                                required 
+                            /><br />
 
                             <label htmlFor="password"> Password</label><br />
-                            <input type="text" id="password" name="password" /><br />
+                            <input 
+                                type="password" 
+                                id="password" 
+                                name="password" 
+                                value={password} 
+                                onChange={(e) => setPassword(e.target.value)} 
+                                required 
+                            /><br />
 
-                            <input type="checkbox" id="rememberme" defaultChecked />
-                            Remember me <br />
                             <button type="submit" id="login"> Log In </button>
                         </form>
+                        {errorMessage && <div>{errorMessage}</div>}
+                        {successMessage && <div>{successMessage}</div>}
                     </div>
                     <div>
                         Don't have an account? <a href="/SignUp">Sign up here</a>
